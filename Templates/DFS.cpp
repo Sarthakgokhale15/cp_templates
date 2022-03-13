@@ -28,3 +28,16 @@ void dfs(vector<vector<int> > &grid, vector<vector<int> > &visited, int i, int j
     dfs(grid, visited, i, j - 1, n, m);
     dfs(grid, visited, i, j + 1, n, m);
 }
+for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i][j]==2){
+                    id=i,jd=j;
+                }
+                if(grid[i][j]==1){
+                  a=i,b=j;
+                }
+            }
+        }
+        dfs(grid,a,b,n,m);
+
+##############GENERAL DFS################ 
