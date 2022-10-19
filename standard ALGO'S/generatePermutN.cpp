@@ -1,6 +1,7 @@
 // Input: nums = [1,2,3]
 // Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 // returns output in random order
+// 1 <= nums.length <= 6
  
  void search(vector<int>& nums,vector<bool>& chosen,vector<vector<int>>&ans,vector<int>&permutation{
         if(permutation.size()==nums.size()){
