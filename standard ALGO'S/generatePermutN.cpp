@@ -3,6 +3,7 @@
 // returns output in random order
 // 1 <= nums.length <= 6
  
+//  Using Recursion 
  void search(vector<int>& nums,vector<bool>& chosen,vector<vector<int>>&ans,vector<int>&permutation{
         if(permutation.size()==nums.size()){
             ans.push_back(permutation);
@@ -32,3 +33,20 @@
         
     }
 
+
+
+// using inbuilt STL function
+vector<vector<int>> permute(int n){
+    
+    vector<vector<int>>P;
+    vector<int> permutation;
+    for (int i = 0; i < n; i++) {
+        permutation.push_back(i);
+    }
+    do {
+        // Process permutation
+        P.push_back(permutation);
+    } while (next_permutation(permutation.begin(),permutation.end()));
+   
+    return P;
+}
