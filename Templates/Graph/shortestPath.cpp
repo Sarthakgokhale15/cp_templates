@@ -9,6 +9,10 @@ Time Complexity: O(V^2).
 Space Complexity: O(V^2).
 REFER GFG/ CP HANDBOOK
 */
+
+
+//1. If graph is unweighted and only node weight is 1 the BFS can be used to find shortest path even if graph is cyclic.
+
 vector<int> dijkstra(int v, vector<vector<int> > adj[], int source)
 {
     priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int> > > pq;
