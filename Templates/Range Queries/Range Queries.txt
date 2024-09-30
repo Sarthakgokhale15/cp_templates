@@ -1,0 +1,15 @@
+Types of problems
+1. Given array A[A1,A2,A3,....An] find answer for some range [L,R] where 0<=L,R<=N
+2.Types of queries
+    a.offline queries- You will know all queries at the begining e.g [2,5],[3,8],[5,8] so precomputation like prefix sum in range sum would be helpful
+    b.online queries- 
+        i.Need to answer queries one by one and dont have access to next queries untill you answer current query e.g. [2,5]->answer this query->[3,8]
+        ii.In Online queries one variation could be [2,5] gives a then for next query make it [3+a,8+a] thats why the name online queries
+        iii. Updates can be point Updates or range Updates
+3.PREFIX SUM Implementation already covered.
+    a.works only for invertible functions like +,-,/,* e.g x+y=10 for x=5 we know y will be 5 but max,min functions are not invertible
+4.Segment Trees(point and range Updates)
+5.Fenwick Trees
+6.MO's Algorithm(arrays and trees)
+7.Square Root Decomposition
+8.Sparse table

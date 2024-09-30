@@ -1,0 +1,36 @@
+https://youtu.be/iaRvydtqLV4?si=RXDi_RJIEnO10w6K
+
+1.Sparse Table is a data structure, that allows answering range queries. 
+2.Advatages
+    a.It can answer most range queries in O(logN).
+    b.but its true power is answering range minimum queries (or equivalent range maximum queries). For those queries it can compute the answer in O(1)
+3.Disadvantages
+    a.The only drawback of this data structure is, that it can only be used on immutable arrays. This means, that the array cannot be changed between two queries. 
+    b.If any element in the array changes, the complete data structure has to be recomputed.
+
+
+# What is sparese Table
+    1. dp[i][j] -> answer to query [i,i+ (2^j)-1]
+
+# How can it anser range queries
+    1.Range Sum queries?
+        ->[L,R] is the range [L,L+W] where W=R-L
+        ->W can be written as binary number. e.g if w=45 then w=(101101) in binary
+    2.any range of size w can be broken into <= log(W) ranges
+    3.For above example we can answer 
+        ->sum(L,R)=Table[L][5] + Table[L1][3] + Table[L2][2] + Table[L3][0] 
+
+# How to build it
+  ->Dynamic Programming
+  ->states
+    ->dp(i,j) means range starting from i and ends with i+(2^j)-1 and it is power of 2 so if we divide this range into 2 equal parts with width 2^(j-1)
+    ->dp(i,j)= dp(i,j-1)+dp(i+(2^j),j-1)
+    
+
+# Range Min/Max queries in O(1) time
+    ->min(L,R)= min( min(L,R-1), min(L+2,R))
+
+
+# How to find greatest power of 2 less than W=L-R
+    -> take algorithm as log(W)=x implies w=2^x
+    -> can be calulated using bitwise left shift tricks 2^j = (1<<j) 
